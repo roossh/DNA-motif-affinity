@@ -2,7 +2,7 @@
 
 Ohjelmalle annetaan syötteenä mutaatiotiedosto (oletusformaattina tn. Variant Call Format, eli VCF). Tästä haetaan transkriptiofaktoreiden sitoutumiskohtien lähistölle osuvat mutaatiot, lasketaan muutokset näiden kyvyssä sitoa transkriptiofaktoreita ja palautetaan tulostiedosto jossain bioinformaattisesti mielekkäässä formaatissa (TBA).
 
-Motiiviaffiniteetin muutokset ovat esimerkiksi syöpätutkimuksessa kiinnostuksen kohteena, sillä geenien vääränlaisella säätelyllä on todistetusti roolinsa syövän kehittymisessä. Motiiviaffiniteettien laskemisen pohjana käytetään <i>positional weight</i> -matriiseja, joihin on määritetty transkriptiofaktorikohtaisesti nukleotidin (A,T,C tai G) vaikutus motiivin kykyyn sitoa transkriptiofaktoreita.
+Motiiviaffiniteetin muutokset ovat esimerkiksi syöpätutkimuksessa kiinnostuksen kohteena, sillä geenien vääränlaisella säätelyllä on todistetusti roolinsa syövän kehittymisessä. Motiiviaffiniteettien laskemisen pohjana käytetään <i>positional frequency</i> -matriiseja, joihin on määritetty transkriptiofaktorikohtaisesti nukleotidin (A,T,C tai G) esiintyvyydet motiivin eri positioissa.
 
 ##### Käyttäjät
 
@@ -12,6 +12,6 @@ Biologi
 - valitsee tutkittavan transkriptiofaktorin motiiviaffiniteettimatriisin
 - syöttää ohjelmalle analysoitavaksi mutaatiotiedoston
 - voi myös lisätä analyysiä varten omia tietokantojaan
--- onnistuu, jos ovat oikeassa formaatissa
+*  onnistuu, jos ovat oikeassa formaatissa
 
 
