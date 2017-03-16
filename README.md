@@ -1,25 +1,19 @@
 ### DNA-motif-affinity
 Javalabra2017-4
 
+### Mikä?
+
+Motiiviaffiniteetti kuvaa DNA:ssa sijaitsevan lyhyen sekvenssin kykyä sitoa geeninsäätelyyn vaikuttavia proteiineja.
+
 ### Käsitteistöä
 
-#### Motiivi (eng. motif)
-
-Motiivi on lyhyt pätkä DNAta, jonka tehtävänä on sitoa proteiineja.
-
-#### Affiniteetti (eng. affinity)
-
-Kyky sitoa proteiineja, <i>motiiviaffiniteetilla</i> viitataan kyseisen DNA-sekvenssin kykyyn sitoa esim. transkriptiofaktoreita.
-
-#### Transkriptiofaktori
-
-Proteiini, joka tunnistaa jonkin osan DNA:sta, sitoutuu siihen ja vaikuttaa joko aktivoivasti tai passivoivasti johonkin "lähistön" geeniin.
+To be continued
 
 ### Lähteet
 
 #### Matriisit
 
-Matriisit on ladattu JASPAR -tietokannasta [lisää linkki]
+Matriisit on ladattu [JASPAR -tietokannasta](http://jaspar.genereg.net/). JASPAR on open-source, eli heidän dataansa voi käyttää ilman rajoitteita.
 
 #### BED-tiedostot
 
