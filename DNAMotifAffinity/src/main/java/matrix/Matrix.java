@@ -23,19 +23,6 @@ public class Matrix {
         this.freqMatrix = freqMatrix;
     }
     
-    public void printMatrix() {
-        // this prints the matrix for the user
-        // needed more for the Weight Matrix than anything else :)
-        
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[row].length; col++) {
-                System.out.print(matrix[row][col]+"\t");
-            }   
-                System.out.println();
-        }
-        
-    }
-    
     public double getColSum(int colNumber) {
         // with for-loop
         double colSum = 0.0;
