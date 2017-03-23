@@ -5,6 +5,10 @@ Javalabra2017-4
 
 Motiiviaffiniteetti kuvaa DNA:ssa sijaitsevan lyhyen sekvenssin kykyä sitoa geeninsäätelyyn vaikuttavia proteiineja.
 
+### Dokumentaatio
+
+[Aiheen kuvaus ja rakenne](dokumentaatio/aiheenKuvausJaRakenne.md)
+
 ### Käsitteistöä
 
 To be continued
