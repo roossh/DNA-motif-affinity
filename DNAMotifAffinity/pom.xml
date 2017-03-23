@@ -36,9 +36,13 @@
                 <configuration>
                     <targetClasses>
                         <param>dnamotifaffinity.*</param>
+                        <param>matrix.*</param>
+                        <param>logic.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>dnamotifaffinity.*</param>
+                        <param>matrix.*</param>
+                        <param>logic.*</param>
                     </targetTests>
                 </configuration>
 
