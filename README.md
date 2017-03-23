@@ -3,7 +3,7 @@ Javalabra2017-4
 
 ### Mikä?
 
-Motiiviaffiniteetti kuvaa DNA:ssa sijaitsevan lyhyen sekvenssin kykyä sitoa geeninsäätelyyn vaikuttavia proteiineja.
+Motiiviaffiniteetti kuvaa DNA:ssa sijaitsevan lyhyen sekvenssin kykyä sitoa geeninsäätelyyn vaikuttavia proteiineja. Ohjelma määrittää frekvenssimatriisin pohjalta affiniteettiscoren, jonka avulla se analysoi mutaatioiden vaikutusta transkriptiofaktoreiden sitoutumiseen.
 
 ### Dokumentaatio
 
