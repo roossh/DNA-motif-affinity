@@ -17,6 +17,6 @@ Biologi
 
 ##### (Alustava) luokkakaavio
 
-![Luokkakaavio](alustava_luokkakaavio.png)
+![Luokkakaavio](luokkakaavio_alustava.png)
 
 Hiiriteknisistä syistä luokkakaavio on toistaiseksi melko karmean näköinen :)
