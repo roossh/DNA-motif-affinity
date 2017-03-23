@@ -15,3 +15,8 @@ Biologi
 *  onnistuu, jos ovat oikeassa formaatissa
 
 
+##### (Alustava) luokkakaavio
+
+![Luokkakaavio](alustava_luokkakaavio.png)
+
+Hiiriteknisistä syistä luokkakaavio on toistaiseksi melko karmean näköinen :)
