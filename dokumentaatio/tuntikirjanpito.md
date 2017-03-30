@@ -10,3 +10,5 @@ Päivä | Tunnit | Kuvaus
 23.03.2017 | 1.5h | Aihekuvauksen päivittelyä, matriisilukija
 23.03.2017 | 1h | testiluokkien valmistelua
 23.03.2017 | 2h | Ohjelmointia, bugien metsästystä
+25.05.2017 | 1h | Tiedostonlukijan ohjelmointia
+30.03.2017 | 7h | Tiedostonlukijat, logiikkaa, testien valmistelua
