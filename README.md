@@ -11,10 +11,10 @@ Juuri nyt ohjelma lukee matriiseja (ehdolla, että nämä ovat tabillä eroteltu
 
 ### Dokumentaatio
 
-[Aiheen kuvaus ja rakenne](dokumentaatio/aiheenKuvausJaRakenne.md)
-[Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
-[Checkstyle](dokumentaatio/checkstyle/checkstyle.html) (päivitetty viimeksi 2017/03/30)
-[Pit-raportti](dokumentaatio/pit/201703302307/index.html) (päivitetty viimeksi 2017/03/30)
+[Aiheen kuvaus ja rakenne](dokumentaatio/aiheenKuvausJaRakenne.md)<br>
+[Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)<br>
+[Checkstyle](dokumentaatio/checkstyle/checkstyle.html) (päivitetty viimeksi 2017/03/30)<br>
+[Pit-raportti](dokumentaatio/pit/201703302307/index.html) (päivitetty viimeksi 2017/03/30)<br>
 
 ### Käsitteistöä
 
