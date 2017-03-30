@@ -23,4 +23,4 @@ Hiiriteknisistä syistä luokkakaavio on toistaiseksi melko karmean näköinen :
 
 ##### Checkstyle-raportti
 
-![Checkstyle](checkstyle.html)
+![Checkstyle](checkstyle/checkstyle.html)
