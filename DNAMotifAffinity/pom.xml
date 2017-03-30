@@ -37,10 +37,12 @@
                     <targetClasses>
                         <param>matrix.*</param>
                         <param>logic.*</param>
+                        <param>readers.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>matrix.*</param>
                         <param>logic.*</param>
+                        <param>readers.*</param>
                     </targetTests>
                 </configuration>
 

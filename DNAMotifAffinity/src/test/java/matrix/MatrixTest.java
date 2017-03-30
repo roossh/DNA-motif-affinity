@@ -6,6 +6,8 @@ package matrix;
  * and open the template in the editor.
  */
 
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -76,8 +78,12 @@ public class MatrixTest {
         m[1][8] = 2.0;
         m[2][8] = 1.0;
         m[3][8] = 6.0;
-        
-        this.matrix = new Matrix(m, false);
+        List<String> nucleotides = new ArrayList<>();
+        nucleotides.add("A");
+        nucleotides.add("C");
+        nucleotides.add("G");
+        nucleotides.add("T");
+        this.matrix = new Matrix(m, true, nucleotides);
     }
     
     @After
@@ -115,13 +121,33 @@ public class MatrixTest {
     }
     
     @Test
-    public void getFreqMatrixWorksIfFalse() {
-        assertEquals(false, matrix.isFreqMatrix());
+    public void getFreqMatrixWorksIfTrue() {
+        assertEquals(true, matrix.isFreqMatrix());
     }
     
     @Test
-    public void getFreqMatrixWorksIfTrue() {
-        Matrix m1 = new Matrix(new double[4][4], true);
-        assertEquals(true, m1.isFreqMatrix());
+    public void getFreqMatrixWorksIfFalse() {
+        List<String> nucleotides = new ArrayList<>();
+        nucleotides.add("A");
+        nucleotides.add("C");
+        nucleotides.add("G");
+        nucleotides.add("T");
+        Matrix m1 = new Matrix(new double[4][4], false, nucleotides);
+        assertEquals(false, m1.isFreqMatrix());
+    }
+    
+    @Test
+    public void getNucleotidesReturnsCorrectNucleotides() {
+        List<String> nucleotides = new ArrayList<>();
+        nucleotides.add("A");
+        nucleotides.add("C");
+        nucleotides.add("G");
+        nucleotides.add("T");
+        assertEquals(nucleotides, matrix.getNucleotides());
+    }
+    
+    @Test
+    public void printNucleotidesCommandWorks() {
+        assertEquals("A;C;G;T;",matrix.returnNucleotidesAsString());
     }
 }

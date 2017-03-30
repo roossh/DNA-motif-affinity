@@ -6,6 +6,8 @@ package logic;
  * and open the template in the editor.
  */
 
+import java.util.ArrayList;
+import java.util.List;
 import matrix.Matrix;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -76,8 +78,13 @@ public class PWMCalculatorTest {
         m[1][8] = 2.0;
         m[2][8] = 1.0;
         m[3][8] = 6.0;
+        List<String> nucleotides = new ArrayList<>();
+        nucleotides.add("A");
+        nucleotides.add("C");
+        nucleotides.add("G");
+        nucleotides.add("T");
         
-        this.matrix = new Matrix(m, false);
+        this.matrix = new Matrix(m, true, nucleotides);
         
         this.calculator = new PWMCalculator(this.matrix);
     }
