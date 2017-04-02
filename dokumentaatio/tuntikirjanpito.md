@@ -12,3 +12,4 @@ Päivä | Tunnit | Kuvaus
 23.03.2017 | 2h | Ohjelmointia, bugien metsästystä
 25.05.2017 | 1h | Tiedostonlukijan ohjelmointia
 30.03.2017 | 7h | Tiedostonlukijat, logiikkaa, testien valmistelua
+02.04.2017 | 1h | Koodikatselmointi
