@@ -7,14 +7,14 @@ Motiiviaffiniteetti kuvaa DNA:ssa sijaitsevan lyhyen sekvenssin kykyä sitoa gee
 
 ### Tämänhetkinen tilanne
 
-Juuri nyt ohjelma lukee matriiseja (ehdolla, että nämä ovat tabillä eroteltuja, muuten ohjelma ei toimi) ja analysoi näistä scoren mutaatioille tietyissä positioissa. Vielä ohjelma ei lue VCF-tiedostosta suoraan mutaatioita analyysiä varten, joten mutaatiot toimivat pitkälti vain merkkijonojen perusteella (kuitenkin tiedostoja tullaan lukemaan merkkijonoina, joten logiikka on jo olemassa).
+Ohjelma ottaa syötteenä VCF-tiedoston, BED-tiedoston sekä PFM-tiedoston. Analysoi ja luo tulostiedoston.
 
 ### Dokumentaatio
 
 [Aiheen kuvaus ja rakenne](dokumentaatio/aiheenKuvausJaRakenne.md)<br>
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)<br>
 [Checkstyle](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/checkstyle/checkstyle.html) (päivitetty viimeksi 2017/03/30)<br>
-[Pit-raportti](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/pit/201703302307/index.html) (päivitetty viimeksi 2017/03/30)<br>
+[Pit-raportti](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/pit/201704202308/index.html) (päivitetty viimeksi 2017/03/30)<br>
 
 ### Käsitteistöä
 
@@ -38,4 +38,4 @@ Matriisit on ladattu [JASPAR -tietokannasta](http://jaspar.genereg.net/). JASPAR
 
 #### BED-tiedostot
 
-TBA
+BED-tiedostot ladattavissa JASPARista myös.
