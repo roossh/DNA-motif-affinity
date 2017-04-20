@@ -35,11 +35,13 @@
                 <version>1.1.8</version>
                 <configuration>
                     <targetClasses>
+			<param>dnamotifaffinity.*</param>
                         <param>matrix.*</param>
                         <param>logic.*</param>
                         <param>readers.*</param>
                     </targetClasses>
                     <targetTests>
+			<param>dnamotifaffinity.*</param>
                         <param>matrix.*</param>
                         <param>logic.*</param>
                         <param>readers.*</param>
