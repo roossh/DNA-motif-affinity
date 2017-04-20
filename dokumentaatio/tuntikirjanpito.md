@@ -16,3 +16,4 @@ Päivä | Tunnit | Kuvaus
 10.04.2017 | 1h | Käyttöjärjestelmän rakentamista
 18.04.2017 | 3h | Tiedostolukijat kasaan, käyttöjärjestelmä
 19.04.2017 | 4h | Graafinen käyttöjärjestelmä
+20.04.2017 | 3h | Dokumentaation päivittelyä, graafisen käyttöliittymän korjausta

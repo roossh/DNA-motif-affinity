@@ -26,3 +26,7 @@ Luokkakaavio kuvastaa tämän hetkistä tilannetta.
 ##### Checkstyle-raportti
 
 ![Checkstyle](checkstyle/checkstyle.html)
+
+##### Pit-raportti
+
+![Pit](pit/201704202308/index.html)
