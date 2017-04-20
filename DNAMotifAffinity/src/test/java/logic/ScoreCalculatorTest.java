@@ -17,7 +17,7 @@ public class ScoreCalculatorTest {
     
     @Before
     public void setUp() throws IOException {
-        MatrixReader reader = new MatrixReader("src/main/resources/MA0466.1.pfm", true);
+        MatrixReader reader = new MatrixReader("src/main/resources/MA0466.1.pfm");
         reader.readTheFile();
         reader.createMatrix();
         Matrix matrix = reader.createMatrix();

@@ -2,6 +2,7 @@ package readers;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ import matrix.Matrix;
 // error messages to be added
 // matrix readers should be used to read the file and convert it into java object matrix
 
-public class MatrixReader {
+public class MatrixReader{
     
     private BufferedReader reader;
     private final String fileName;
@@ -21,9 +22,9 @@ public class MatrixReader {
     private List<Double> frequencies;
     private List<String> nucleotides;
     
-    public MatrixReader(String fileName, boolean freqMatrix) {
+    public MatrixReader(String fileName) {
         this.fileName = fileName;
-        this.freqMatrix = freqMatrix;
+        this.freqMatrix = true;
     }
     
     public void readTheFile() throws FileNotFoundException, IOException {

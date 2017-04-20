@@ -28,7 +28,7 @@ public class MatrixReaderTest {
 
     @Before
     public void setUp() {
-        this.reader = new MatrixReader("src/main/resources/MA0466.1.pfm", true);
+        this.reader = new MatrixReader("src/main/resources/MA0466.1.pfm");
     }
 
     @Test
@@ -50,7 +50,7 @@ public class MatrixReaderTest {
     
     @Test
     public void throwsFileNotFound() throws IOException{
-        MatrixReader r1 = new MatrixReader("doesntexist.txt", false);
+        MatrixReader r1 = new MatrixReader("doesntexist.txt");
         boolean thrown = false;
         
         try {
