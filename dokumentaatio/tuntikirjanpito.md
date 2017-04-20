@@ -13,3 +13,6 @@ Päivä | Tunnit | Kuvaus
 25.05.2017 | 1h | Tiedostonlukijan ohjelmointia
 30.03.2017 | 7h | Tiedostonlukijat, logiikkaa, testien valmistelua
 02.04.2017 | 1h | Koodikatselmointi
+10.04.2017 | 1h | Käyttöjärjestelmän rakentamista
+18.04.2017 | 3h | Tiedostolukijat kasaan, käyttöjärjestelmä
+19.04.2017 | 4h | Graafinen käyttöjärjestelmä
