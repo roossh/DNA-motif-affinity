@@ -13,13 +13,15 @@ Biologi
 - syöttää ohjelmalle analysoitavaksi mutaatiotiedoston
 - voi myös lisätä analyysiä varten omia tietokantojaan
 *  onnistuu, jos ovat oikeassa formaatissa
+- MutationAnalyser palauttaa analyysin lopuksi tulostiedoston, joka on muotoa:
 
+CHROM | POS | REF | ALT | SCORE
 
-##### (Alustava) luokkakaavio
+##### Luokkakaavio
 
-![Luokkakaavio](luokkakaavio_alustava.png)
+![Luokkakaavio](luokkakaavio.png)
 
-Hiiriteknisistä syistä luokkakaavio on toistaiseksi melko karmean näköinen :)
+Luokkakaavio kuvastaa tämän hetkistä tilannetta.
 
 ##### Checkstyle-raportti
 
