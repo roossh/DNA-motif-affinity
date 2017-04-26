@@ -35,8 +35,9 @@ public class MenuListener implements ActionListener {
     private JTextField vcfField;
     private JTextField bedField;
     private JTextField pfmField;
+    private JTextField outputField;
     
-    public MenuListener(JFrame frame, JMenuItem vcf, JMenuItem bed, JMenuItem pfm, JButton runButton, JTextField vcfField, JTextField bedField, JTextField pfmField) {
+    public MenuListener(JFrame frame, JMenuItem vcf, JMenuItem bed, JMenuItem pfm, JButton runButton, JTextField vcfField, JTextField bedField, JTextField pfmField, JTextField outputField) {
         this.fileChooser = new JFileChooser();
         this.frame = frame;
         //his.textArea = textArea;
@@ -51,6 +52,7 @@ public class MenuListener implements ActionListener {
         this.vcfField = vcfField;
         this.bedField = bedField;
         this.pfmField = pfmField;
+        this.outputField = outputField;
     }
     
     @Override

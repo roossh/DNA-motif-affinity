@@ -21,11 +21,12 @@ public class MutationAnalyser {
     
     public void run(String vcfLocation, String bedLocation, String outputName) throws FileNotFoundException, IOException {
         PrintWriter writer = new PrintWriter(outputName, "UTF-8");
+        writer.println("#CHROM\tPOS\tREF\tALT\tMOTIFPOS\tMOTIFSCORE");
         BufferedReader bedReader = new BufferedReader(new FileReader(bedLocation));
         String bedLine, vcfLine;
         while ((bedLine = bedReader.readLine()) != null) {
             BufferedReader vcfReader = new BufferedReader(new FileReader(vcfLocation));
-            String bedChr = bedLine.split("\t")[0].replaceAll("chr", "");
+            String bedChr = bedLine.split("\t")[0];
             int bedStart = Integer.parseInt(bedLine.split("\t")[1]);
             int bedStop = Integer.parseInt(bedLine.split("\t")[2]);
                     
@@ -38,12 +39,13 @@ public class MutationAnalyser {
                 int vcfPosition = Integer.parseInt(vcfLine.split("\t")[2]);
                         
                 if (vcfChr.equals(bedChr) && vcfPosition >= bedStart && vcfPosition <= bedStop) {
-                            //score mutation
                     int motifPosition = defineMotifPosition(bedStart, vcfPosition);
                     String refAllele = vcfLine.split("\t")[3];
                     String altAllele = vcfLine.split("\t")[4];
                     double affinityScore = defineMutationScore(motifPosition, altAllele);
-                    writer.println(vcfChr + "\t" + vcfPosition + "\t" + refAllele + "\t" + altAllele + "\t" + (motifPosition + 1) + "\t" + affinityScore);
+                    writer.println(vcfChr + "\t" + vcfPosition + "\t" +
+                            refAllele + "\t" + altAllele + "\t" +
+                            (motifPosition + 1) + "\t" + affinityScore);
                 }
             }
             

@@ -87,7 +87,7 @@ public class GUI implements Runnable {
                 "using a position frequency matrix\nfor different variants\n\n" + 
                 "Required files (all must be tab-separated!):\nVCF: Variant Call Format CHROM | ID | POS | REF | ALT | ...\n" +
                 "BED: regions file CHROM | START | STOP | ...\n" + 
-                "PFM: position frequency matrix";
+                "PFM: position frequency matrix from JASPAR";
         
         helpPane.setText(helpText);
         
@@ -111,10 +111,12 @@ public class GUI implements Runnable {
         JTextField vcfField = new JTextField();
         JTextField bedField = new JTextField();
         JTextField pfmField = new JTextField();
+        JTextField outputField = new JTextField();
         
         vcfField.setSize(100, 25);
         bedField.setSize(100, 25);
         pfmField.setSize(100, 25);
+        outputField.setSize(100, 25);
         
         vcfField.setEnabled(false);
         bedField.setEnabled(false);
@@ -124,11 +126,12 @@ public class GUI implements Runnable {
         
         chosenFields.setSize(400, 200);
         
-        chosenFields.setLayout(new GridLayout(3, 2));
+        chosenFields.setLayout(new GridLayout(4, 2));
         
         JLabel vcfLabel = new JLabel("VCF:");
         JLabel bedLabel = new JLabel("BED:");
         JLabel pfmLabel = new JLabel("PFM:");
+        JLabel outputLabel = new JLabel("Output name: ");
         
         chosenFields.add(vcfLabel);
         chosenFields.add(vcfField);
@@ -136,14 +139,16 @@ public class GUI implements Runnable {
         chosenFields.add(bedField);
         chosenFields.add(pfmLabel);
         chosenFields.add(pfmField);
+        chosenFields.add(outputLabel);
+        chosenFields.add(outputField);
         
-        MenuListener menuListener = new MenuListener(frame, vcfFile, bedFile, pfmFile, runButton, vcfField, bedField, pfmField);
+        MenuListener menuListener = new MenuListener(frame, vcfFile, bedFile, pfmFile, runButton, vcfField, bedField, pfmField, outputField);
         
         vcfFile.addActionListener(menuListener);
         bedFile.addActionListener(menuListener);
         pfmFile.addActionListener(menuListener);
         
-        runButton.addActionListener(new RunListener(vcfField, bedField, pfmField));
+        runButton.addActionListener(new RunListener(vcfField, bedField, pfmField, outputField));
         
         JButton cancelButton = new JButton("Cancel");
         lowerPanel.add(cancelButton);

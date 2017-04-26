@@ -25,11 +25,13 @@ public class RunListener implements ActionListener {
     private final JTextField vcf;
     private final JTextField bed;
     private final JTextField pfm;
+    private final JTextField output;
     
-    public RunListener(JTextField vcf, JTextField bed, JTextField pfm) {
+    public RunListener(JTextField vcf, JTextField bed, JTextField pfm, JTextField output) {
         this.vcf = vcf;
         this.bed = bed;
         this.pfm = pfm;
+        this.output = output;
     }
     
     @Override
@@ -48,7 +50,6 @@ public class RunListener implements ActionListener {
     }
     
     public void runAnalysis() throws IOException, FileNotFoundException {
-        System.out.println("VCF file is: " + vcf.getText());
         MatrixReader matrixReader = new MatrixReader(pfm.getText());
         matrixReader.readTheFile();
         Matrix matrix = matrixReader.createMatrix();
@@ -59,6 +60,12 @@ public class RunListener implements ActionListener {
         double[][] ppm = calc.calculatePPM();
         Matrix pwm = calc.getPWM(ppm);
         MutationAnalyser mutationAnalysis = new MutationAnalyser(pwm);
-        mutationAnalysis.run(vcf.getText(), bed.getText(), "src/main/resources/output_gui.txt");
+        String outputName;
+        if (output.getText().equals("")) {
+            outputName = "motif_output.txt";
+        } else {
+            outputName = output.getText();
+        }
+        mutationAnalysis.run(vcf.getText(), bed.getText(), outputName);
     }
 }
