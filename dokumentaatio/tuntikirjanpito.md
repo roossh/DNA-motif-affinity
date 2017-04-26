@@ -17,3 +17,4 @@ Päivä | Tunnit | Kuvaus
 18.04.2017 | 3h | Tiedostolukijat kasaan, käyttöjärjestelmä
 19.04.2017 | 4h | Graafinen käyttöjärjestelmä
 20.04.2017 | 3h | Dokumentaation päivittelyä, graafisen käyttöliittymän korjausta
+26.04.2017 | 2h | Koodin päivittämistä, esimerkkitiedostojen parantelua
