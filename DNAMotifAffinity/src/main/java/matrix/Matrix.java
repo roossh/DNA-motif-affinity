@@ -22,14 +22,12 @@ public class Matrix {
     private boolean freqMatrix;
     
     public Matrix(double[][] matrix, boolean freqMatrix, List<String> nucleotides) {
-        //constructor
         this.matrix = matrix;
         this.freqMatrix = freqMatrix;
         this.nucleotides = nucleotides;
     }
     
     public double getColSum(int colNumber) {
-        // with for-loop
         double colSum = 0.0;
         
         for (int i = 0; i < matrix.length; i++) {
@@ -51,8 +49,6 @@ public class Matrix {
     }
     
     public double getTotalSum() {
-        // fix this mess
-        // returns the sum of all rows, this functions as the overall total
         double rowTotals = 0.0;
         
         for (int i = 0; i < matrix.length; i++) {
@@ -69,7 +65,6 @@ public class Matrix {
     }
     
     public int getSequenceLength() {
-        //all rows have the same amount of columns...(which is the standard)
         return matrix[1].length;
     }
     
@@ -92,5 +87,19 @@ public class Matrix {
         }
         
         return returnNucleos;
+    }
+    
+    private String returnConsensusSequence() {
+        return "";
+    }
+    
+    public String returnConsensusSequenceWithMutation(int mutationPosition, String altAllele) {
+        String consensus = returnConsensusSequence();
+        consensus = consensus.toLowerCase();
+        String mutatedSequence = consensus.substring(0,mutationPosition - 1) + altAllele + consensus.substring(mutationPosition + 1);
+        
+        return mutatedSequence;
+
+
     }
 }
