@@ -13,9 +13,9 @@ Ohjelma ottaa syötteenä VCF-tiedoston, BED-tiedoston sekä PFM-tiedoston. Anal
 
 [Aiheen kuvaus ja rakenne](dokumentaatio/aiheenKuvausJaRakenne.md)<br>
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)<br>
-[Checkstyle](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/checkstyle/checkstyle.html) (päivitetty viimeksi 2017/03/30)<br>
-[Pit-raportti](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/pit/201704202308/index.html) (päivitetty viimeksi 2017/03/30)<br>
-
+[Checkstyle](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/checkstyle/checkstyle.html) (päivitetty viimeksi 2017/04/27)<br>
+[Pit-raportti](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/pit/201704272226/index.html) (päivitetty viimeksi 2017/04/27)<br>
+[JavaDoc](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/apidocs/index.html) (päivitetty viimeksi 2017/04/27)
 ### Käsitteistöä
 
 #### Motiivi
