@@ -19,7 +19,7 @@ Ohjelma ottaa syötteenä VCF-tiedoston, BED-tiedoston sekä PFM-tiedoston. Anal
 [Käyttöohjeet](dokumentaatio/kayttoohjeet.md)<br>
 [Rakennekuvaus](dokumentaatio/rakennekuvaus.md)<br>
 
-###Jar-tiedosto
+### Jar-tiedosto
 
 DNAMotifAffinity-1.0-SNAPSHOT.jar
 
