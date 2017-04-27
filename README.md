@@ -17,6 +17,7 @@ Ohjelma ottaa syötteenä VCF-tiedoston, BED-tiedoston sekä PFM-tiedoston. Anal
 [Pit-raportti](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/pit/201704272226/index.html) (päivitetty viimeksi 2017/04/27)<br>
 [JavaDoc](http://htmlpreview.github.io/?https://github.com/roossh/DNA-motif-affinity/blob/master/dokumentaatio/apidocs/index.html) (päivitetty viimeksi 2017/04/27)<br>
 [Käyttöohjeet](dokumentaatio/kayttoohjeet.md)<br>
+[Rakennekuvaus](dokumentaatio/rakennekuvaus.md)<br>
 
 ### Käsitteistöä
 
