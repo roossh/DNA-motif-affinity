@@ -16,7 +16,7 @@ import matrix.Matrix;
 import readers.MatrixReader;
 import readers.MutationAnalyser;
 
-/**
+/**Kuuntelee Run-nappia.
  *
  * @author roosa
  */
@@ -26,7 +26,13 @@ public class RunListener implements ActionListener {
     private final JTextField bed;
     private final JTextField pfm;
     private final JTextField output;
-    
+    /**RunListener vaatii tiedostoja toimiakseen.
+     * 
+     * @param vcf Variant Call Format
+     * @param bed Regions file
+     * @param pfm Frekvenssimatriisi
+     * @param output Nimi tulostiedostolle
+     */
     public RunListener(JTextField vcf, JTextField bed, JTextField pfm, JTextField output) {
         this.vcf = vcf;
         this.bed = bed;
@@ -48,7 +54,11 @@ public class RunListener implements ActionListener {
         done.setTitle("Done!");
         done.setVisible(true);
     }
-    
+    /**Käynnistää analyysin ajon napista.
+     * 
+     * @throws IOException heittää errorin
+     * @throws FileNotFoundException heittää errorin
+     */
     public void runAnalysis() throws IOException, FileNotFoundException {
         MatrixReader matrixReader = new MatrixReader(pfm.getText());
         matrixReader.readTheFile();

@@ -8,7 +8,7 @@ package dnamotifaffinity;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
+/**Kuuntelee Cancel-nappia.
  *
  * @author roosa
  */

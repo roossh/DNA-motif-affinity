@@ -7,26 +7,32 @@ package matrix;
 
 import java.util.List;
 
-/**
+/**Matriisi-luokka laskee double[][]-arraystä arvoja ja tallentaa tietoa nukleotidikohtaisesti.
  *
  * @author roosa
  */
 public class Matrix {
-    //matrix will contain information about the 2D-array and calculate some basic things
-    //CANNOT contain anything other than numbers => error message if the matrix is formatted wrong
-    // also all of the rows have the same number of columns!! (4 rows x N columns)
-    // matrix should contain information about which nucleotide is which row
-    
+
     private double[][] matrix;
     private List<String> nucleotides;
     private boolean freqMatrix;
     
+    /**Matriisi sisältää N riviä, ja jokaisen elementin frekvenssin/todennäköisyyden nukleotidia kohden.
+     * 
+     * @param matrix käytetään double[][]-arraytä matriisin pohjana
+     * @param freqMatrix boolean, joka kertoo onko kyseessä frekvenssimatriisi vai ei
+     * @param nucleotides listaus nukleotideista, jotka määritellään matriisissa.
+     */
     public Matrix(double[][] matrix, boolean freqMatrix, List<String> nucleotides) {
         this.matrix = matrix;
         this.freqMatrix = freqMatrix;
         this.nucleotides = nucleotides;
     }
-    
+    /**Metodi laskee sarakesumman halutulle sarakkeelle.
+     * 
+     * @param colNumber sarakenumero, josta halutaan laskea matriisin lukujen summa
+     * @return colSum sarakkeen summa
+     */
     public double getColSum(int colNumber) {
         double colSum = 0.0;
         
@@ -36,7 +42,11 @@ public class Matrix {
         
         return colSum;
     }
-    
+    /**Metodi laskee rivisumman halutulle riville.
+     * 
+     * @param rowNumber rivinumero, josta halutaan laskea summa
+     * @return rowSum rivin summa
+     */
     public double getRowSum(int rowNumber) {
         // with for loop
         double rowSum = 0.0;
@@ -47,7 +57,10 @@ public class Matrix {
         
         return rowSum;
     }
-    
+    /**
+     * Laskee kaikkien lukujen yhteisen summan matriisissa.
+     * @return rowTotals rivisummien summa
+     */
     public double getTotalSum() {
         double rowTotals = 0.0;
         
@@ -57,7 +70,12 @@ public class Matrix {
         
         return rowTotals;
     }
-    
+    /**
+     * Palauttaa yksittäisen solun arvon.
+     * @param row määritetty rivi, josta halutaan arvo
+     * @param col määritetty sarake, josta halutaan arvo
+     * @return cellValue tietyn solun sisältämä arvo
+     */
     public double getCellValue(int row, int col) {
         double cellVal = matrix[row][col];
         
@@ -79,7 +97,10 @@ public class Matrix {
     public List<String> getNucleotides() {
         return this.nucleotides;
     }
-    
+    /**TODO
+     * Metodi määrittelee nukleotidit, jotka esiintyvät matriisissa ja palauttaa nämä merkkijonona.
+     * @return palauttaa nukleotidit merkkijonona
+     */
     public String returnNucleotidesAsString() {
         String returnNucleos = "";
         for (String n : this.nucleotides) {
@@ -92,11 +113,16 @@ public class Matrix {
     private String returnConsensusSequence() {
         return "";
     }
-    
+    /**
+     * Metodi kirjoittaa motiivin sekvenssin merkkijonomuodossa.
+     * @param mutationPosition positio, jossa on mutaatio
+     * @param altAllele vaihtoehtoinen alleeli
+     * @return palauttaa mutatoitudun sekvenssin merkkijonona
+     */
     public String returnConsensusSequenceWithMutation(int mutationPosition, String altAllele) {
         String consensus = returnConsensusSequence();
         consensus = consensus.toLowerCase();
-        String mutatedSequence = consensus.substring(0,mutationPosition - 1) + altAllele + consensus.substring(mutationPosition + 1);
+        String mutatedSequence = consensus.substring(0, mutationPosition - 1) + altAllele + consensus.substring(mutationPosition + 1);
         
         return mutatedSequence;
 

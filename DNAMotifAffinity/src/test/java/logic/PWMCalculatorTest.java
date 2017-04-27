@@ -104,11 +104,6 @@ public class PWMCalculatorTest {
     }
     
     @Test
-    public void getModelWorks() {
-        assertEquals(0.25,this.calculator.getModel(), 0.001);
-    }
-    
-    @Test
     public void PWMConversionWorks() {
         double[][] ppm = this.calculator.calculatePPM();
         Matrix pwm = this.calculator.getPWM(ppm);

@@ -25,7 +25,7 @@ import javax.swing.WindowConstants;
 import readers.MatrixReader;
 
 /**
- *
+ *Metodi rakentaa graafisen käyttöliittymän.
  * @author roosa
  */
 public class GUI implements Runnable {
@@ -65,7 +65,7 @@ public class GUI implements Runnable {
     private void createComponents(Container container) {
         JPanel basePanel = new JPanel();
         
-        basePanel.setLayout(new GridLayout(3,1));
+        basePanel.setLayout(new GridLayout(3, 1));
 
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Files");

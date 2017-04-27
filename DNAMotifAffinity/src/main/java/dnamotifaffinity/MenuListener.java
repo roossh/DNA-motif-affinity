@@ -14,7 +14,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-/**
+/**MenuListener lukee käytössä olevaa Menua.
  *
  * @author roosa
  */
@@ -36,7 +36,18 @@ public class MenuListener implements ActionListener {
     private JTextField bedField;
     private JTextField pfmField;
     private JTextField outputField;
-    
+    /**Konstruoi MenuListenerin.
+     * 
+     * @param frame ikkuna, johon piirretään
+     * @param vcf vcf-tiedosto
+     * @param bed bed-tiedosto
+     * @param pfm pfm-tiedosto
+     * @param runButton ajonappula
+     * @param vcfField tekstialue, johon tulee VCF-lokaatio
+     * @param bedField tekstialue, johon tulee BED-lokaatio
+     * @param pfmField tekstialue, johon tulee PFM-lokaatio
+     * @param outputField käyttäjä voi kirjoittaa tähän tiedostonimen, jos tyhjä, niin "motif_output.txt"
+     */
     public MenuListener(JFrame frame, JMenuItem vcf, JMenuItem bed, JMenuItem pfm, JButton runButton, JTextField vcfField, JTextField bedField, JTextField pfmField, JTextField outputField) {
         this.fileChooser = new JFileChooser();
         this.frame = frame;
@@ -83,14 +94,10 @@ public class MenuListener implements ActionListener {
         }
     }
     
-    public String getMenuItemLocation() {
-        return "";
-    }
-    
-    public String chooseFile(FileNameExtensionFilter filter) {
+    private String chooseFile(FileNameExtensionFilter filter) {
         fileChooser.setFileFilter(filter);
         int returnVal = fileChooser.showOpenDialog(frame);
-        if(returnVal == JFileChooser.APPROVE_OPTION) {
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
             System.out.println("You chose to open this file: " +
                 fileChooser.getSelectedFile().getName());
         }
@@ -98,7 +105,7 @@ public class MenuListener implements ActionListener {
         return fileChooser.getSelectedFile().getAbsolutePath();
     }
     
-    public String getAbsolutePath() {
+    private String getAbsolutePath() {
         return fileChooser.getSelectedFile().getAbsolutePath();
     }
     
