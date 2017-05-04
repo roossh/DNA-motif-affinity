@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dnamotifaffinity;
+package gui;
 
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.swing.JDialog;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import logic.PWMCalculator;
 import matrix.Matrix;
@@ -43,23 +45,42 @@ public class RunListener implements ActionListener {
     @Override
     @SuppressWarnings("empty-statement")
     public void actionPerformed(ActionEvent e) {
+        boolean runSucceeded = false;
         try {
-            runAnalysis();
+            runSucceeded = runAnalysis();
         } catch (IOException ex) {
             System.out.println("IOException");;
         }
-        JDialog done = new JDialog();
-        done.setSize(100, 100);
-        done.setAlwaysOnTop(true);
-        done.setTitle("Done!");
-        done.setVisible(true);
+        
+        if (runSucceeded) {
+            JDialog done = new JDialog();
+            done.setSize(200, 100);
+            done.setAlwaysOnTop(true);
+            done.setTitle("Done!");
+            done.setVisible(true);
+        } else {
+            JDialog failed = new JDialog();
+            failed.setSize(200, 100);
+            failed.setAlwaysOnTop(true);
+            failed.setTitle("Run failed!");
+            JPanel panel = new JPanel();
+            panel.setLayout(new FlowLayout());
+            JTextField textField = new JTextField();
+            textField.setText("Run failed, check the log file.");
+            textField.setEditable(false);
+            panel.add(textField);
+            failed.add(panel);
+            failed.setVisible(true);
+        }
     }
     /**Käynnistää analyysin ajon napista.
      * 
+     * @return runSucceeded kertoo, onnistuiko ajo vai ei.
      * @throws IOException heittää errorin
      * @throws FileNotFoundException heittää errorin
+     * 
      */
-    public void runAnalysis() throws IOException, FileNotFoundException {
+    private boolean runAnalysis() throws IOException, FileNotFoundException {
         MatrixReader matrixReader = new MatrixReader(pfm.getText());
         matrixReader.readTheFile();
         Matrix matrix = matrixReader.createMatrix();
@@ -68,14 +89,19 @@ public class RunListener implements ActionListener {
         
         PWMCalculator calc = new PWMCalculator(matrix);
         double[][] ppm = calc.calculatePPM();
+        
         Matrix pwm = calc.getPWM(ppm);
         MutationAnalyser mutationAnalysis = new MutationAnalyser(pwm);
+        
         String outputName;
+        
         if (output.getText().equals("")) {
             outputName = "motif_output.txt";
         } else {
             outputName = output.getText();
         }
-        mutationAnalysis.run(vcf.getText(), bed.getText(), outputName);
+        
+        boolean runSucceeded = mutationAnalysis.run(vcf.getText(), bed.getText(), outputName);
+        return runSucceeded;
     }
 }

@@ -3,13 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dnamotifaffinity;
+package gui;
 
+import gui.CancelListener;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.io.File;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,6 +22,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
@@ -57,6 +63,10 @@ public class GUI implements Runnable {
         createComponents(frame.getContentPane());
         
         frame.setPreferredSize(new Dimension(800, 400));
+        //frame.pack();
+        
+        frame.setIconImage(new ImageIcon(getClass().getResource("/dna.png")).getImage());
+        
         frame.pack();
         
         frame.setVisible(true);
@@ -65,7 +75,9 @@ public class GUI implements Runnable {
     private void createComponents(Container container) {
         JPanel basePanel = new JPanel();
         
-        basePanel.setLayout(new GridLayout(3, 1));
+        basePanel.setLayout(new GridBagLayout());
+
+        GridBagConstraints constraints = new GridBagConstraints();
 
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Files");
@@ -74,6 +86,11 @@ public class GUI implements Runnable {
         JMenuItem vcfFile = new JMenuItem("Choose a VCF");
         JMenuItem bedFile = new JMenuItem("Choose a BED");
         JMenuItem pfmFile = new JMenuItem("Choose a PFM");
+        
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.weightx = 0.5;
+        constraints.gridx = 1;
+        constraints.gridy = 0;
         
         fileMenu.add(vcfFile);
         fileMenu.add(bedFile);
@@ -155,9 +172,46 @@ public class GUI implements Runnable {
         cancelButton.setEnabled(true);
         cancelButton.addActionListener(new CancelListener());
         
-        basePanel.add(menuBar);
-        basePanel.add(chosenFields);
-        basePanel.add(lowerPanel);
+        JTabbedPane tabPane = new JTabbedPane();
+        JTextField logger = new JTextField();
+        JTextField outputter = new JTextField();
+        JPanel plotter = new JPanel();
+        
+        logger.setText("Logger here.");
+        outputter.setText("Output info here");
+        
+        logger.setEnabled(false);
+        outputter.setEnabled(false);
+        tabPane.addTab("Logger", logger);
+        tabPane.addTab("Output", outputter);
+        tabPane.addTab("Plot", plotter);
+        
+        
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.weightx = 0.5;
+        constraints.weighty = 0.5;
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.gridwidth = GridBagConstraints.REMAINDER;
+        
+        basePanel.add(menuBar, constraints);
+        
+        
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.weightx = 0.5;
+        constraints.gridx = 0;
+        constraints.gridy = 2;
+        
+        basePanel.add(chosenFields, constraints);
+        
+        
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.weightx = 0.5;
+        constraints.gridx = 0;
+        constraints.gridy = 3;
+        
+        basePanel.add(lowerPanel, constraints);
+
         container.add(basePanel);
     }
 }

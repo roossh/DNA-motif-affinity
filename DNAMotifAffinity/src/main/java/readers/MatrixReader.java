@@ -2,7 +2,6 @@ package readers;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +20,7 @@ public class MatrixReader {
     private double[][] arrayBase;
     private List<Double> frequencies;
     private List<String> nucleotides;
+    
     /**Konstruoi MatrixReaderin.
      * 
      * @param fileName tiedostinimi, joka luetaan
@@ -46,14 +46,22 @@ public class MatrixReader {
             this.frequencies = new ArrayList<>();
             while ((line  = reader.readLine()) != null) {
                 if (line.startsWith(">")) {
-                    continue;
+                    
                 } else {
                     String nucleotide = Character.toString(line.charAt(0));
                     nucleotides.add(nucleotide);
                     
+                    if (line.split("\\[").length <= 1) {
+                        break;
+                    }
+                    
                     String nucleotideCounts = line.split("\\[")[1].split("\\]")[0];
                     
                     String[] nucleotideList = nucleotideCounts.split("\t");
+                    
+                    if (line.split("\t").length <= 1) {
+                        break;
+                    }
                     
                     for (String n : nucleotideList) {
                         Double n1 = Double.parseDouble(n.trim());

@@ -1,4 +1,7 @@
 package dnamotifaffinity;
+
+import gui.GUI;
+
 /**Käynnistää ohjelman.
  * 
  * @author roosa

@@ -37,15 +37,10 @@ public class MatrixReaderTest {
     }
     
     @Test
-    public void returnsAMatrix() throws FileNotFoundException, IOException {
+    public void returnsACorrectMatrix() throws FileNotFoundException, IOException {
         this.reader.readTheFile();
         Matrix m = this.reader.createMatrix();
         assertEquals(13006.0, m.getCellValue(0, 0), 0.0001);
-    }
-    
-    @Test
-    public void matrixIsFormattedProperly() {
-        //TODO
     }
     
     @Test
