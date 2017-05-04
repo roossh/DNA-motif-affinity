@@ -7,7 +7,8 @@ Motiiviaffiniteetti kuvaa DNA:ssa sijaitsevan lyhyen sekvenssin kykyä sitoa gee
 
 ### Tämänhetkinen tilanne
 
-Ohjelma ottaa syötteenä VCF-tiedoston, BED-tiedoston sekä PFM-tiedoston. Analysoi ja luo tulostiedoston.
+JAR-tiedoston ikoni on creative commons-kuvake DNA:sta, joka löytyi Googlesta. :) Itse ohjelmasta poistin tämän, mutta jar-tiedosto nyt halusi pitää sen mukana.
+
 
 ### Dokumentaatio
 
