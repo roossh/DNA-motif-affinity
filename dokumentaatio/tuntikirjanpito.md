@@ -19,3 +19,4 @@ Päivä | Tunnit | Kuvaus
 20.04.2017 | 3h | Dokumentaation päivittelyä, graafisen käyttöliittymän korjausta
 26.04.2017 | 2h | Koodin päivittämistä, esimerkkitiedostojen parantelua
 28.04.2017 | 1h | GUI:n korjausta
+04.05.2017 | 4h | Repon viimeistelyä, testien kirjoittamista
