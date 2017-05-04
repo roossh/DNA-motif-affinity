@@ -22,7 +22,9 @@ Ohjelma ottaa syötteenä VCF-tiedoston, BED-tiedoston sekä PFM-tiedoston. Anal
 
 ### Jar-tiedosto
 
-DNAMotifAffinity-1.0-SNAPSHOT.jar
+DNAMotifAffinity.jar<br>
+
+[Pre-release](https://github.com/roossh/DNA-motif-affinity/releases/download/1.0/DNAMotifAffinity.jarhttps://github.com/roossh/DNA-motif-affinity/releases/download/1.0/DNAMotifAffinity.jarhttps://github.com/roossh/DNA-motif-affinity/releases/download/1.0/DNAMotifAffinity.jarhttps://github.com/roossh/DNA-motif-affinity/releases/download/1.0/DNAMotifAffinity.jarhttps://github.com/roossh/DNA-motif-affinity/releases/download/1.0/DNAMotifAffinity.jar)
 
 ### Käsitteistöä
 
