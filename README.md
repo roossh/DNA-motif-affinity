@@ -7,7 +7,7 @@ Motiiviaffiniteetti kuvaa DNA:ssa sijaitsevan lyhyen sekvenssin kykyä sitoa gee
 
 ### Tämänhetkinen tilanne
 
-JAR-tiedoston ikoni on creative commons-kuvake DNA:sta, joka löytyi Googlesta. :) Itse ohjelmasta poistin tämän, mutta jar-tiedosto nyt halusi pitää sen mukana.
+JAR-tiedoston ikoni on creative commons-kuvake DNA:sta (ainakin sivuston itsensä mukaan), joka löytyi Googlesta. :) Itse ohjelmasta poistin tämän, mutta jar-tiedosto nyt halusi pitää sen mukana.
 
 
 ### Dokumentaatio
