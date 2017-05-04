@@ -18,3 +18,4 @@ Päivä | Tunnit | Kuvaus
 19.04.2017 | 4h | Graafinen käyttöjärjestelmä
 20.04.2017 | 3h | Dokumentaation päivittelyä, graafisen käyttöliittymän korjausta
 26.04.2017 | 2h | Koodin päivittämistä, esimerkkitiedostojen parantelua
+28.04.2017 | 1h | GUI:n korjausta

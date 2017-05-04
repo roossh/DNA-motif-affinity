@@ -13,11 +13,11 @@ CHROM | ID | POS | REF | ALT
 
 Jossa:
 
-CHROM = kromosomi, jossa mutaatio on (muotoa chrN)
-ID = mahdollinen rs-tunniste mutaatiolle (voi olla ".", jos tätä ei tiedetä)
-POS = positio, jossa mutaatio on (indeksointi alkaa luvusta 1)
-REF = referenssigenomissa oleva referenssialleeli positiolle
-ALT = mutatoitunut alleeli
+CHROM = kromosomi, jossa mutaatio on (muotoa chrN)<br>
+ID = mahdollinen rs-tunniste mutaatiolle (voi olla ".", jos tätä ei tiedetä)<br>
+POS = positio, jossa mutaatio on (indeksointi alkaa luvusta 1)<br>
+REF = referenssigenomissa oleva referenssialleeli positiolle<br>
+ALT = mutatoitunut alleeli<br>
 
 #### BED
 
@@ -29,9 +29,9 @@ CHROM | START | STOP
 
 Jossa:
 
-CHROM = kromosomi, jossa alue sijaitsee (muotoa chrN)
-START = alueen alkupiste (indeksointi alkaa 1:stä)
-STOP = alueen loppupiste (indeksointi alkaa 1:stä)
+CHROM = kromosomi, jossa alue sijaitsee (muotoa chrN)<br>
+START = alueen alkupiste (indeksointi alkaa 1:stä)<br>
+STOP = alueen loppupiste (indeksointi alkaa 1:stä)<br>
 
 #### PFM
 
@@ -43,3 +43,18 @@ Matriisin arvojen tulee olla eroteltuja tabulaarilla.
 
 Kun ohjelmaan on valittu kaikki tarvittavat tiedostot, voi sen ajaa klikkaamalla nappia "Run". Kun ajo on valmis, ilmestyy "Done"-ikkuna.
 
+### Esimerkkitiedostot
+
+Ohjelman latauksessa tulee mukana kolme tiedostoa, jotka toimivat esimerkkinä:<br><br>
+
+* sample1.vcf
+* cebpb.bed
+* MA0466.1.pfm
+
+test.vcf on Pythonilla satunnaisesti luotu, VCF-tiedostoa jäljittelevä tiedosto, jonka tarkoituksena on vain näyttää, millaisia tiedostoja ohjelma lukee ja tämän scoresta ei juurikaan voi päätellä mitään biologisesti mielenkiintoista.<br>
+
+cebpb.bed sisältää pienen osan tunnetuista CEBPB-transkriptiofaktorin sitoutumiskohdista. Oikea tiedosto (löytyy JASPAR-tietokannasta) on huomattavasti suurempi.<br>
+
+MA0466.1.pfm on frekvenssimatriisi sellaisessa muodossa, kuin mitä JASPAR-tietokannassa esitetään, korjattu kuitenkin tab-separated -muotoon.<br>
+
+Tiedostot löytyvät myös erikseen Githubista.
